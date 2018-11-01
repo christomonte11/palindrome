@@ -19,8 +19,7 @@ function Phrase(content) {
         let theLetters = [];
 
         const letterRegex = /[a-z]/i;
-        for(let i = 0; i < this.content.length; i++) {
-            let character = this.content.charAt(i);
+        for(let character of this.content) {
             if (character.match(letterRegex)) {
                 theLetters.push(character);
             }
