@@ -14,10 +14,17 @@ function Phrase(content) {
         return this.content.toLowerCase();
     };
 
-    // Returns the letters in the content.
+    // Returns the letters in the content ("Hello, world!" -> "Helloworld").
     this.letters = function letters() {
-        // Stubs the value returned.
-        return this.content;
+        let theLetters = [];
+
+        for(let i = 0; i < this.content.length; i++) {
+            if (this.content.charAt(i).match(/[a-zA-Z]/)) {
+                theLetters.push(this.content.charAt(i));
+            }
+        }
+
+        return theLetters.join("");
     };
 
     // Returns true if the phrase is a palindrome, false otherwise.
