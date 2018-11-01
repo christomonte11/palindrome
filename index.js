@@ -19,11 +19,11 @@ function Phrase(content) {
         let theLetters = [];
 
         const letterRegex = /[a-z]/i;
-        for(let character of this.content) {
+        Array.from(this.content).forEach(function(character) {
             if (character.match(letterRegex)) {
                 theLetters.push(character);
             }
-        }
+        });
 
         return theLetters.join("");
     };
