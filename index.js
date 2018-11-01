@@ -11,7 +11,7 @@ function Phrase(content) {
 
     // Returns content processed for palindrome testing.
     this.processedContent = function processedContent() {
-        return this.content.toLowerCase();
+        return this.letters().toLowerCase();
     };
 
     // Returns the letters in the content ("Hello, world!" -> "Helloworld").
