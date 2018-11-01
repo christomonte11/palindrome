@@ -19,8 +19,9 @@ function Phrase(content) {
         let theLetters = [];
 
         for(let i = 0; i < this.content.length; i++) {
-            if (this.content.charAt(i).match(/[a-zA-Z]/)) {
-                theLetters.push(this.content.charAt(i));
+            let character = this.content.charAt(i);
+            if (character.match(/[a-zA-Z]/)) {
+                theLetters.push(character);
             }
         }
 
